@@ -69,7 +69,7 @@ function renderResults(contacts) {
   element2.classList.add("media-body");
     element2.style.width = "60 px";
   var temp = "<h4>" + contact.name + " <small><i>February 19, 2016</i></small></h4><p>You've Taken</p>"
-  element2.innerHTML(temp);
+  element2.innerHTML=temp;
 
   element1.appendChild(img1);
   element1.appendChild(element2);
