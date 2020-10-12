@@ -1,7 +1,7 @@
 
 const butReq = document.getElementById('butRequest');
 butReq.addEventListener('click', getContacts);
-const contact = document.getElementById('contacts');
+const divcontact = document.getElementById('contacts');
 
 
 
@@ -21,16 +21,14 @@ async function getContacts() {
   
   const opts = {multiple: true};
   
-  try {
+  
     const contacts = await navigator.contacts.select(props, opts);
+    console.log(contacts);
     handleResults(contacts);
-  } catch (ex) {
     //ulResults.classList.toggle('error', true);
     //ulResults.classList.toggle('success', false);
     //ulResults.innerText = ex.toString();
-    console.log("error");
-    console.log(ex.toString());
-  }
+    
 
 }
 
@@ -64,16 +62,21 @@ function renderResults(contacts) {
   img1.classList.add("mt-3");
   img1.classList.add("rounded-circle");
 
-  element1.style.width = "60 px";
+  
 
 
   var element2 = document.createElement("div");
   element2.classList.add("media-body");
+    element2.style.width = "60 px";
   var temp = "<h4>" + contact.name + " <small><i>February 19, 2016</i></small></h4><p>You've Taken</p>"
-  element2.appendChild(temp);
+  element2.innerHTML(temp);
 
   element1.appendChild(img1);
   element1.appendChild(element2);
+    
+    divcontact.appendChild(element1);
+    
+    
 
 
 
