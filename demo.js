@@ -29,6 +29,7 @@ async function getContacts() {
     //ulResults.classList.toggle('success', false);
     //ulResults.innerText = ex.toString();
     console.log("error");
+    console.log(ex.toString());
   }
 
 }
