@@ -1,4 +1,4 @@
-window.location.reload(true)
+
 const butReq = document.getElementById('butRequest');
 butReq.addEventListener('click', getContacts);
 const contact = document.getElementById('contacts');
