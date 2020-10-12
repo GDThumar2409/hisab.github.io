@@ -7,12 +7,7 @@ const contact = document.getElementById('contacts');
 
 const supported = ('contacts' in navigator && 'ContactsManager' in window);
 
-if (supported) {
-  const divNotSupported = document.getElementById('notSupported');
-  divNotSupported.classList.toggle('hidden', true);
-  butReq.removeAttribute('disabled');
-  checkProperties();
-}
+
 
 
 
